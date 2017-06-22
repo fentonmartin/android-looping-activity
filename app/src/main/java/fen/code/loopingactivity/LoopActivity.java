@@ -1,5 +1,6 @@
 package fen.code.loopingactivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.TextView;
@@ -25,5 +26,17 @@ public class LoopActivity extends AppCompatActivity {
         TextView textView = (TextView) findViewById(R.id.textview);
         /* set number on TextView */
         textView.setText(String.valueOf(number));
+
+    }
+
+    private void activityLoop(int number, int max) {
+        /* init intent to LoopActivity */
+        Intent intent = new Intent(LoopActivity.this, LoopActivity.class);
+        /* init Extra INT to intent */
+        intent.putExtra(Strings.EXTRA_INT, number);
+        /* init Extra MAX to intent */
+        intent.putExtra(Strings.EXTRA_MAX, max);
+        /* start intent activity */
+        startActivity(intent);
     }
 }
