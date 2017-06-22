@@ -10,14 +10,17 @@ import fen.code.loopingactivity.utils.Strings;
 
 public class MainActivity extends AppCompatActivity {
 
+    private int number;
+    private int max;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
         /* init number and number */
-        int number = 0;
-        int max = 10;
+        number = 0;
+        max = 10;
 
         /* declare buttton */
         Button button = (Button) findViewById(R.id.button);
@@ -25,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                
             }
         });
     }
