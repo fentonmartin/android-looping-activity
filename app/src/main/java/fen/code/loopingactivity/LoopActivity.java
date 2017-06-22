@@ -24,6 +24,9 @@ public class LoopActivity extends AppCompatActivity {
         /* init max using getIntExtra from intent default 1*/
         max = getIntent().getIntExtra(Strings.EXTRA_MAX, 1);
 
+        /* set number incremental */
+        number++;
+
         /* init TextView */
         TextView textView = (TextView) findViewById(R.id.textview);
         /* set number on TextView */
