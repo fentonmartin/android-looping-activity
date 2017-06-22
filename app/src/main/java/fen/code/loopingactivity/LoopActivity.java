@@ -2,6 +2,7 @@ package fen.code.loopingactivity;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.widget.TextView;
 
 import fen.code.loopingactivity.utils.Strings;
 
@@ -19,5 +20,10 @@ public class LoopActivity extends AppCompatActivity {
         number = getIntent().getIntExtra(Strings.EXTRA_INT, 0);
         /* init max using getIntExtra from intent default 1*/
         max = getIntent().getIntExtra(Strings.EXTRA_MAX, 1);
+
+        /* init TextView */
+        TextView textView = (TextView) findViewById(R.id.textview);
+        /* set number on TextView */
+        textView.setText(String.valueOf(number));
     }
 }
