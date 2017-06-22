@@ -6,9 +6,24 @@
     tools:context="fen.code.loopingactivity.MainActivity">
 
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:id="@+id/textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
         android:gravity="center"
         android:text="Hello World!" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textview"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="16dp"
+        android:background="@color/colorPrimary"
+        android:padding="8dp"
+        android:text="Start Loop"
+        android:textColor="#fff" />
 
 </RelativeLayout>
