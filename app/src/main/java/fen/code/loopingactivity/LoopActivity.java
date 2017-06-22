@@ -3,6 +3,8 @@ package fen.code.loopingactivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 import fen.code.loopingactivity.utils.Strings;
@@ -27,6 +29,16 @@ public class LoopActivity extends AppCompatActivity {
         /* set number on TextView */
         textView.setText(String.valueOf(number));
 
+        /* declare button */
+        Button button = (Button) findViewById(R.id.button);
+        /* add setOnClickListener */
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                /* call activityLoop */
+                activityLoop(number, max);
+            }
+        });
     }
 
     private void activityLoop(int number, int max) {
