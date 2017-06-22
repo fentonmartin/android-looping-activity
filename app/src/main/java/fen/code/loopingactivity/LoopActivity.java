@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import fen.code.loopingactivity.utils.Strings;
 
@@ -42,6 +43,16 @@ public class LoopActivity extends AppCompatActivity {
                 activityLoop(number, max);
             }
         });
+
+        /* add maximum number loop */
+        if (number >= max) {
+            /* add alpha on button */
+            button.setAlpha((float) 0.5);
+            /* add enabled false on button */
+            button.setEnabled(false);
+            /* add last toast */
+            Toast.makeText(this, "This is the last activity", Toast.LENGTH_SHORT).show();
+        }
     }
 
     private void activityLoop(int number, int max) {
